@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Number To String</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script >
+    
+        var num=prompt("Enter The number: ");
+        var no=parseInt(num);
+        var oneto9=["one","two","three","four","five","six","seven","eight","nine"];
+        var tento19=["ten","eleven","twelve","thirteen","forteen","fifteen","sixteen","seventeen","eighteen","ninteen"];
+        var twto90=["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninty"];
+        
+        var quo1=parseInt(no/100);
+        
+        if(quo1 != 0){
+        var temp= quo1*100;
+        no-=temp;
+        }
+        
+        var quo=parseInt(no/10);
+        var rem=no%10;
+
+        if(no == 0){
+            alert("Zero");
+        }
+        else if(quo < 1){
+            if(quo1 != 0){
+                alert(oneto9[quo1-1] +" hundred and "+ oneto9[rem-1]);
+            }
+            else{
+            alert(oneto9[rem-1]);
+            }
+        }
+        else if(quo == 1){
+            if(quo1 != 0){
+                alert(oneto9[quo1-1] +" hundred and "+ tento19[rem]);
+            }
+            else{
+                alert(tento19[rem]);
+            }
+            
+        }
+        else{
+            var ans= twto90[quo-2];
+            if(rem != 0){
+            ans+= " " + oneto9[rem-1];
+            }
+            
+            if(quo1 != 0){
+                alert(oneto9[quo1-1] +" hundred and "+ ans);
+            }
+            else{
+                alert(ans);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
