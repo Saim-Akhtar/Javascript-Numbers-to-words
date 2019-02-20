@@ -1,1 +1,1 @@
-the program is applicable to numbers less than 1000 only .. Means it works only on max 3 digit numbers
+the program is applicable to numbers less than 1000 only .. Means it works only on max 3 digit numbers ... The rule
