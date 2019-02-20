@@ -1,0 +1,1 @@
+the program is applicable to numbers less than 1000 only
